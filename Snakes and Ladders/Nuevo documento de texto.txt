@@ -1,0 +1,14 @@
+public void jugar(Integer posicion,Jugador j)
+	{
+		//jugadores.get(posicion).remove(j);//Borro el jugador de la lista de jugadores de la posici?n actual
+		posicion=posicion+valorDado; //Sumo a la posici?n lo que sali? en el dado
+		if(posicion>100)
+		{
+			posicion=posicion-(posicion-100);
+		}
+		j.setPos(posicion);
+		if(!evaluar(j)) //Eval?o si en la posici?n a la que va hay o no una serpiente/escalera
+			jugadores.get(posicion).add(j); //Si no la hay, lo sit?o en esa posici?n
+		else
+			jugadores.get(j.getPos()).add(j);//Si la hay, lo sit?o directamente en su posici?n correspondiente tras tomar la serpiente/escalera
+	}

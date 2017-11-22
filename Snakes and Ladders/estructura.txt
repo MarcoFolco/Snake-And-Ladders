@@ -1,0 +1,11 @@
+CLiente a servidor
+
+jugar (tirar dados)
+abandonar (partida) *pendiente
+desloguearse
+
+Servidor a cliente
+
+estado pos contenido 
+estadoJugador id pos 
+mensaje cont
